@@ -1,0 +1,99 @@
+.section { padding: 6rem 4rem; background: var(--black); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.certList { display: flex; flex-direction: column; gap: 1px; }
+
+.certItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--charcoal);
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+.certItem:hover { border-left-color: var(--orange); background: var(--steel); }
+
+.certIcon {
+  width: 38px; height: 38px;
+  background: rgba(245,197,24,0.08);
+  border: 1px solid rgba(245,197,24,0.22);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+  color: var(--hiviz);
+}
+.certIcon svg { width: 17px; height: 17px; }
+
+.certName {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--white);
+}
+.certDesc { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+
+.partnerBox {
+  background: var(--charcoal);
+  padding: 2.5rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: sticky;
+  top: 7rem;
+}
+.partnerBox h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+.partnerBox h3 span { color: var(--orange); }
+.partnerBox p { font-size: 0.88rem; color: var(--light); line-height: 1.7; margin-bottom: 1.75rem; font-weight: 300; }
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 1.5rem;
+}
+.partnerTile {
+  background: var(--steel);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s, background 0.2s;
+}
+.partnerTile:hover { color: var(--white); background: var(--mid); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.75rem;
+  border: 1px solid rgba(245,197,24,0.28);
+  color: var(--hiviz-dim);
+  background: rgba(245,197,24,0.04);
+}
+
+@media (max-width: 900px) {
+  .section { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+  .partnerBox { position: static; }
+}

@@ -1,0 +1,128 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 4rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(240,90,26,0.06) 0%, transparent 50%),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.013) 80px, rgba(255,255,255,0.013) 81px),
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.013) 80px, rgba(255,255,255,0.013) 81px);
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(240,90,26,0.1);
+  border: 1px solid rgba(240,90,26,0.28);
+  color: var(--orange-light);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.38rem 1rem;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  margin-bottom: 2rem;
+  width: fit-content;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.dot {
+  width: 6px; height: 6px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.75); }
+}
+
+.h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.8rem, 10vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.h1 em {
+  font-style: normal;
+  color: var(--orange);
+  display: block;
+}
+
+.outline {
+  -webkit-text-stroke: 2px var(--white);
+  color: transparent;
+  display: block;
+}
+
+.sub {
+  font-size: 1.1rem;
+  color: var(--light);
+  max-width: 540px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4.5rem;
+  animation: fadeUp 0.8s ease 0.7s both;
+}
+
+.statsBar {
+  display: flex;
+  gap: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.9s both;
+}
+
+.stat { display: flex; flex-direction: column; gap: 0.15rem; }
+
+.statNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 2.1rem;
+  color: var(--hiviz);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .statsBar { gap: 2rem; }
+}

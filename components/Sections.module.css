@@ -1,0 +1,448 @@
+/* ── PARTNERS ── */
+.partners { padding: 6rem 4rem; background: var(--charcoal); }
+
+.partnersIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.tagRow { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.orangeTag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.75rem;
+  border: 1px solid rgba(240,90,26,0.35);
+  color: var(--orange-light);
+  background: rgba(240,90,26,0.05);
+}
+
+.partnerCardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.05);
+}
+
+.partnerCard {
+  background: var(--charcoal);
+  padding: 2rem 1.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: default;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.partnerCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--hiviz);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.partnerCard:hover { background: var(--steel); }
+.partnerCard:hover::after { transform: scaleX(1); }
+
+.partnerCardIcon {
+  width: 52px; height: 52px;
+  background: rgba(245,197,24,0.07);
+  border: 1px solid rgba(245,197,24,0.18);
+  display: flex; align-items: center; justify-content: center;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  color: var(--hiviz);
+}
+
+.partnerCardName {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.partnerCardRegion { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.partnerCardDiscount {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--hiviz);
+  line-height: 1.1;
+}
+.partnerCardDiscount span {
+  display: block;
+  font-size: 0.67rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.partnersNote {
+  margin-top: 2.5rem;
+  background: rgba(245,197,24,0.05);
+  border: 1px solid rgba(245,197,24,0.18);
+  border-left: 3px solid var(--hiviz);
+  padding: 1.2rem 1.5rem;
+  font-size: 0.83rem;
+  color: var(--light);
+  line-height: 1.7;
+}
+
+/* ── INDUSTRIES ── */
+.industries { padding: 6rem 4rem; background: var(--black); }
+
+.industryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.05);
+}
+
+.industryCard {
+  background: var(--charcoal);
+  padding: 2.2rem;
+  cursor: default;
+  transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.industryCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.industryCard:hover { background: var(--steel); }
+.industryCard:hover::after { transform: scaleX(1); }
+
+.indIcon { font-size: 2.2rem; margin-bottom: 0.9rem; display: block; }
+
+.industryCard h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: var(--white);
+}
+.industryCard p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+/* ── PRICING ── */
+.pricing { padding: 6rem 4rem; background: var(--charcoal); }
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 2rem;
+}
+
+.priceCard {
+  background: var(--charcoal);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.priceCard.featured { background: var(--orange); }
+.priceCard.featured * { color: var(--white) !important; }
+
+.priceLabel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.priceNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  color: var(--hiviz);
+  line-height: 1;
+}
+.priceDesc { font-size: 0.83rem; color: var(--light); line-height: 1.6; font-weight: 300; }
+
+.priceNote {
+  font-size: 0.83rem;
+  color: var(--light);
+  background: var(--steel);
+  padding: 1.3rem 1.5rem;
+  border-left: 3px solid var(--orange);
+  line-height: 1.7;
+}
+
+/* ── WHY HIREO ── */
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+.whyContent {
+  padding: 6rem 4rem;
+  background: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whyList { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 2.5rem; }
+
+.whyItem { display: flex; gap: 1.2rem; align-items: flex-start; }
+
+.whyCheck {
+  width: 26px; height: 26px;
+  background: rgba(240,90,26,0.12);
+  border: 1px solid rgba(240,90,26,0.35);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  color: var(--orange);
+}
+
+.whyItem h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.15rem;
+  color: var(--white);
+}
+.whyItem p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+.whyVisual {
+  background: var(--steel);
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.whyVisual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(rgba(240,90,26,0.035) 0deg 90deg, transparent 90deg 180deg) 0 0 / 40px 40px;
+}
+
+.whyVisualInner {
+  text-align: center;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.whyBig {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 7rem;
+  color: var(--orange);
+  line-height: 0.9;
+  display: block;
+}
+.whyBigSub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  display: block;
+  line-height: 1;
+}
+.whyLabel {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.8rem;
+  display: block;
+}
+
+.complianceBadges { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.65rem; }
+.complianceBadge {
+  background: rgba(240,90,26,0.12);
+  border: 1px solid rgba(240,90,26,0.28);
+  padding: 0.65rem 1.3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--orange-light);
+}
+
+/* ── ABOUT ── */
+.about { padding: 6rem 4rem; background: var(--black); }
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.melbBadge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 1.75rem;
+  width: fit-content;
+}
+.melbBadge strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.melbBadge span { font-size: 0.78rem; color: var(--muted); }
+
+.aboutText { font-size: 0.92rem; color: var(--light); line-height: 1.8; font-weight: 300; margin-bottom: 1.2rem; }
+
+.skylineBox {
+  background: var(--charcoal);
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.skylineSvg {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  width: 100%;
+}
+.skylineLabel {
+  position: relative;
+  z-index: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── CTA BANNER ── */
+.cta {
+  background: var(--orange);
+  padding: 5.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: 'HIREO';
+  position: absolute;
+  right: -2rem; top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 18rem;
+  color: rgba(0,0,0,0.07);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.ctaText { position: relative; z-index: 1; }
+.ctaActions { display: flex; flex-direction: column; gap: 0.8rem; position: relative; z-index: 1; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--charcoal);
+  padding: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footerLogo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.footerLogo span { color: var(--orange); }
+
+.footerTagline { font-size: 0.83rem; color: var(--muted); line-height: 1.7; max-width: 280px; }
+
+.footerGrid h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.footerGrid ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.footerGrid a { color: var(--light); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+.footerGrid a:hover { color: var(--orange); }
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerBottom p { font-size: 0.78rem; color: var(--muted); }
+.footerLegal { display: flex; gap: 1.5rem; }
+.footerLegal a { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footerLegal a:hover { color: var(--white); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .partners, .industries, .pricing, .about { padding: 5rem 1.5rem; }
+  .partnersIntro { grid-template-columns: 1fr; gap: 2rem; }
+  .partnerCardGrid { grid-template-columns: repeat(2, 1fr); }
+  .industryGrid, .priceGrid { grid-template-columns: 1fr; }
+  .why { grid-template-columns: 1fr; }
+  .whyVisual { min-height: 320px; }
+  .whyContent { padding: 5rem 1.5rem; }
+  .aboutGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cta { padding: 4rem 1.5rem; flex-direction: column; }
+  .footer { padding: 3rem 1.5rem; }
+  .footerGrid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
