@@ -4,14 +4,14 @@ import styles from './Sections.module.css'
    PARTNERS
 ────────────────────────────────────── */
 const partnerCards = [
-  { name: 'RMIT TAFE', region: 'Melbourne CBD', discount: 'Up to 20% off' },
-  { name: 'Chisholm Institute', region: 'South-East VIC', discount: 'Up to 18% off' },
-  { name: 'Melbourne Poly', region: 'Multiple Campuses', discount: 'Up to 15% off' },
-  { name: 'Box Hill Institute', region: 'Eastern Suburbs', discount: 'Up to 17% off' },
-  { name: 'Swinburne TAFE', region: 'Hawthorn & beyond', discount: 'Up to 15% off' },
-  { name: 'Gordon TAFE', region: 'Geelong / Regional VIC', discount: 'Up to 20% off' },
-  { name: 'WorkSafe VIC RTOs', region: 'High Risk Work Licences', discount: 'Group Rates' },
-  { name: 'First Aid Partners', region: 'VIC-Wide Delivery', discount: 'Up to 25% off' },
+  { name: 'RMIT TAFE', region: 'Melbourne CBD', badge: 'Preferred Partner' },
+  { name: 'Chisholm Institute', region: 'South-East VIC', badge: 'Preferred Partner' },
+  { name: 'Melbourne Poly', region: 'Multiple Campuses', badge: 'Accredited Partner' },
+  { name: 'Box Hill Institute', region: 'Eastern Suburbs', badge: 'Accredited Partner' },
+  { name: 'Swinburne TAFE', region: 'Hawthorn & beyond', badge: 'Accredited Partner' },
+  { name: 'Gordon TAFE', region: 'Geelong / Regional VIC', badge: 'Preferred Partner' },
+  { name: 'WorkSafe VIC RTOs', region: 'High Risk Work Licences', badge: 'Certified Provider' },
+  { name: 'First Aid Partners', region: 'VIC-Wide Delivery', badge: 'Certified Provider' },
 ]
 
 export function Partners() {
@@ -47,7 +47,7 @@ export function Partners() {
             </div>
             <div className={styles.partnerCardName}>{p.name}</div>
             <div className={styles.partnerCardRegion}>{p.region}</div>
-            <div className={styles.partnerCardDiscount}>{p.discount}<span>negotiated rate</span></div>
+            <div className={styles.partnerCardDiscount}>{p.badge}</div>
           </div>
         ))}
       </div>
